@@ -1,0 +1,119 @@
+:root {
+    --color-dark-cyan: hsl(158, 36%, 37%);
+    --color-cream: hsl(30, 38%, 92%);
+    --color-very-dark-blue: hsl(212, 21%, 14%);
+    --color-dark-grayish-blue: hsl(228, 12%, 48%);
+    --color-white: hsl(0, 0%, 100%);
+
+    --font-weight-500: 500;
+    --font-weight-700: 700;
+
+    --font-family-montserrat: "Montserrat", sans-serif;
+    --font-family--fraunces: "Fraunces", serif;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: var(--color-cream);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    background-color: var(--color-white);
+    width: 21rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.product-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+.context {
+    padding: 1.3rem;
+}
+p {
+    font-size: 14px;
+    font-family: var(--font-family-montserrat);
+    font-weight: var(--font-weight-500);
+    color: var(--color-dark-grayish-blue);
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+}
+.item {
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+}
+h1 {
+    font-family: var(--font-family--fraunces);
+    font-size: 2rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+}
+.price {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+.discounted-price {
+    color: var(--color-dark-cyan);
+    font-weight: var(--font-weight-700);
+}
+.original-price {
+    margin-left: 1rem;
+    text-decoration: line-through;
+}
+button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-dark-cyan);
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    padding: 0.7rem;
+    margin: 0.5rem 0;
+}
+.icon {
+    color: var(--color-white);
+}
+.btn-label {
+    color: var(--color-white);
+    margin-bottom: 0;
+    margin-left: 0.8rem;
+}
+
+@media (min-width: 47rem) {
+    .card {
+        width: 40rem;
+        display: flex;
+        flex-direction: row;
+    }
+    .product-image {
+        content: url("images/image-product-desktop.jpg");
+        width: 50%;
+    }
+    .context {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        padding: 0 2.5rem;
+    }
+    h1 {
+        margin-bottom: 1.4rem;
+    }
+    button:hover {
+        background-color: hsl(159, 40%, 20%);
+    }
+}
